@@ -6,6 +6,8 @@ var swig = require('swig');
 var express = require('express'), routes = require('./routes');
 var session = require("express-session");
 var request = require("request");
+var util = require('util');
+var qs = require('querystring')
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -47,7 +49,6 @@ passport.use(new BitbucketStrategy({
         profile: profile,
         token: token
         };
-        addPostHookForPushEvents();
       return done(null, bitbucketProfile);
   }
 ));
@@ -72,6 +73,25 @@ app.get('/auth/bitbucket', passport.authenticate('bitbucket'), function(req, res
     // The request will be redirected to Bitbucket for authentication, so this
     // function will not be called.
 });
+function getPushEvents(response,callback){
+     var oauth ={
+          consumer_key: BITBUCKET_CONSUMER_KEY
+        , consumer_secret: BITBUCKET_CONSUMER_SECRET
+            }
+        var url = 'https://bitbucket.org/api/1.0/users/shruti514/events';
+        request.get({url:url, oauth:oauth, json:true}, function (err, res, body) {
+            if (err){
+                console.error(err);
+            }
+            callback(response,body);
+        });
+}
+
+app.get('/refresh_push_events',function(req,res){
+    getPushEvents(res,function(res,result){
+        res.json(result);
+    });
+} );
 
 var handleCallback = function (req, res) {
     res.redirect(CONTEXT_URI+'/dashboard');
@@ -92,12 +112,6 @@ app.get('/logout', function(req, res){
       res.redirect('/');
   });
 });
-
-app.post('/event', function (req, res) {
-    
-}
-
-
 
 var addPostHookForPushEvents = function(){
     var user = {
