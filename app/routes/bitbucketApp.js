@@ -126,24 +126,19 @@ var addPostHookForPushEvents = function(){
 }
 
 
-function postEventsToQdApi(res,events,callback){
+function postEventsToQdApi(res,events,writeToken,callback){
 _.each(events,function(event){
     var options = {
-                    url:  properties.get('QD_REST_APP_URL')+ '/stream/'+event.streamid+'event',
-                    json: JSON.stringify(event),
+                    url:  properties.get('QD_REST_APP_URL')+ '/stream/'+event.streamid+'/event',
+                    json: event,
                     headers: {
-                            'Authorization': 'request',
+                            'Authorization': writeToken,
                             'Content-Type' : 'application/json',
                             'Accept' : 'application/json'
                         }
                   };
-    console.log('sending an event :'+ options.url+' with data : '+ options.json);
     request.post(options,function(err,response,body){
-        if(err){
-            res.status(500).send('Error updating an event in QD');
-        }else{
-            callback(res,body)
-        }
+       callback(err,body);
     })
 
   });
@@ -158,7 +153,7 @@ app.get('/refresh_push_events',function(req,res){
         if(user && user.bitbucketUser.pushStreamId){
             getPushEvents(req.session.bitbucketUsername,res,function(res,result){
                     var listOfQdEvents = transformToQdEvent(result.events,user.bitbucketUser.pushStreamId);
-                    postEventsToQdApi(res,listOfQdEvents,function(response,body){
+                    postEventsToQdApi(res,listOfQdEvents,user.streams[0].writeToken,function(err,body){
                     });
                      res.json(listOfQdEvents);
                 });
@@ -177,7 +172,7 @@ app.get('/refresh_push_events',function(req,res){
                     });
                     getPushEvents(req.session.bitbucketUsername,res,function(res,result){
                         var listOfQdEvents = transformToQdEvent(result.events,streamId);
-                        postEventsToQdApi(res,listOfQdEvents,function(response,body){
+                        postEventsToQdApi(res,listOfQdEvents,stream.writeToken,function(err,body){
 
                         });
                          res.json(listOfQdEvents);
