@@ -54,8 +54,8 @@
       <file leaf-file-name="bitbucketApp.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes/bitbucketApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.612069" vertical-offset="3017" max-vertical-offset="4060">
-              <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
+            <state vertical-scroll-proportion="1.7155173" vertical-offset="3001" max-vertical-offset="4060">
+              <caret line="160" column="57" selection-start-line="160" selection-start-column="57" selection-end-line="160" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -292,13 +292,13 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="73" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="74" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="84" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="89" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="983" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="982" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="74" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
@@ -494,7 +494,11 @@
       <created>1412091517486</created>
       <updated>1412091517486</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="organized packages">
+      <created>1412092881719</created>
+      <updated>1412092881719</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -976,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/bitbucketApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.612069" vertical-offset="3017" max-vertical-offset="4060">
-          <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
+        <state vertical-scroll-proportion="1.7155173" vertical-offset="3001" max-vertical-offset="4060">
+          <caret line="160" column="57" selection-start-line="160" selection-start-column="57" selection-end-line="160" selection-end-column="57" />
           <folding />
         </state>
       </provider>

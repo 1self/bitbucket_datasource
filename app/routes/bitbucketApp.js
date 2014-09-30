@@ -155,9 +155,9 @@ app.get('/refresh_push_events',function(req,res){
         if(err){
             res.status(500).send("Database error");
         }
-        if(user && user.pushStreamId){
+        if(user && user.bitbucketUser.pushStreamId){
             getPushEvents(req.session.bitbucketUsername,res,function(res,result){
-                    var listOfQdEvents = transformToQdEvent(result.events,pushStreamId);
+                    var listOfQdEvents = transformToQdEvent(result.events,user.bitbucketUser.pushStreamId);
                     postEventsToQdApi(res,listOfQdEvents,function(response,body){
                     });
                      res.json(listOfQdEvents);
