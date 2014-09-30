@@ -130,8 +130,14 @@ function postEventsToQdApi(res,events,callback){
 _.each(events,function(event){
     var options = {
                     url:  properties.get('QD_REST_APP_URL')+ '/stream/'+event.streamid+'event',
-                    json: JSON.stringify(event)
+                    json: JSON.stringify(event),
+                    headers: {
+                            'Authorization': 'request',
+                            'Content-Type' : 'application/json',
+                            'Accept' : 'application/json'
+                        }
                   };
+    console.log('sending an event :'+ options.url+' with data : '+ options.json);
     request.post(options,function(err,response,body){
         if(err){
             res.status(500).send('Error updating an event in QD');
@@ -154,7 +160,7 @@ app.get('/refresh_push_events',function(req,res){
                     var listOfQdEvents = transformToQdEvent(result.events,pushStreamId);
                     postEventsToQdApi(res,listOfQdEvents,function(response,body){
                     });
-                     res.json(JSON.stringify(listOfQdEvents));
+                     res.json(listOfQdEvents);
                 });
 
         }else{
@@ -174,7 +180,7 @@ app.get('/refresh_push_events',function(req,res){
                         postEventsToQdApi(res,listOfQdEvents,function(response,body){
 
                         });
-                         res.json(JSON.stringify(listOfQdEvents));
+                         res.json(listOfQdEvents);
                     });
                 }else{
                     console.log(error);
