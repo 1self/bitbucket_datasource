@@ -1,0 +1,2 @@
+web: node --debug app/main.js
+

@@ -1,23 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b190347-22ba-458d-a459-d6c82db89ffc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/blank-page.html" afterPath="$PROJECT_DIR$/public/blank-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap-elements.html" afterPath="$PROJECT_DIR$/public/bootstrap-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap-grid.html" afterPath="$PROJECT_DIR$/public/bootstrap-grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/charts.html" afterPath="$PROJECT_DIR$/public/charts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/flot-data.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/flot-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/forms.html" afterPath="$PROJECT_DIR$/public/forms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-1.11.0.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.pie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.resize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.tooltip.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.tooltip.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris-data.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/morris-data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/plugins/morris/raphael.min.js" afterPath="$PROJECT_DIR$/public/js/plugins/morris/raphael.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/sb-admin.css" afterPath="$PROJECT_DIR$/public/css/sb-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tables.html" afterPath="$PROJECT_DIR$/public/tables.html" />
+    <list default="true" id="2b190347-22ba-458d-a459-d6c82db89ffc" name="Default" comment="changes before changing the structure">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile.dev" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/bitbucketApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/bitbucketEvents.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/development.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/oauth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/util/oauthConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/util/propertiesHelper.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.env" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/jsonEvents.json" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/bitbucketAppRoutes.js" afterPath="$PROJECT_DIR$/app/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/blank-page.html" afterPath="$PROJECT_DIR$/app/public/blank-page.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/bootstrap-elements.html" afterPath="$PROJECT_DIR$/app/public/bootstrap-elements.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/bootstrap-grid.html" afterPath="$PROJECT_DIR$/app/public/bootstrap-grid.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/charts.html" afterPath="$PROJECT_DIR$/app/public/charts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/public/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/public/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/plugins/morris.css" afterPath="$PROJECT_DIR$/app/public/css/plugins/morris.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/sb-admin.css" afterPath="$PROJECT_DIR$/app/public/css/sb-admin.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/css/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/bordered-pulled.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/core.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/core.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/fixed-width.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/font-awesome.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/icons.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/icons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/larger.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/larger.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/list.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/list.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/mixins.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/path.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/path.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/rotated-flipped.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/spinning.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/spinning.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/stacked.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/stacked.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/less/variables.less" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_bordered-pulled.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_core.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_core.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_fixed-width.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_icons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_larger.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_list.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_list.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_mixins.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_path.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_path.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_rotated-flipped.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_spinning.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_spinning.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_stacked.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/_variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/font-awesome-4.1.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/app/public/font-awesome-4.1.0/scss/font-awesome.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/app/public/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/app/public/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/app/public/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/app/public/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/forms.html" afterPath="$PROJECT_DIR$/app/public/forms.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/app/public/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/bootstrap.js" afterPath="$PROJECT_DIR$/app/public/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/public/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/jquery-1.11.0.js" afterPath="$PROJECT_DIR$/app/public/js/jquery-1.11.0.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/jquery.js" afterPath="$PROJECT_DIR$/app/public/js/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/excanvas.min.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/excanvas.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/flot-data.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/flot-data.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/jquery.flot.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/jquery.flot.pie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/jquery.flot.resize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/flot/jquery.flot.tooltip.min.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/flot/jquery.flot.tooltip.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris-data.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/morris/morris-data.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/morris/morris.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/morris/morris.min.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/morris/morris.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/plugins/morris/raphael.min.js" afterPath="$PROJECT_DIR$/app/public/js/plugins/morris/raphael.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/stylesheets/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/public/stylesheets/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/public/stylesheets/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/tables.html" afterPath="$PROJECT_DIR$/app/public/tables.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/dashboard.html" afterPath="$PROJECT_DIR$/app/views/dashboard.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/help.html" afterPath="$PROJECT_DIR$/app/views/help.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/signup.html" afterPath="$PROJECT_DIR$/app/views/signup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bit_bucket_app.iws" />
@@ -46,14 +114,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="propertiesHelper.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/util/propertiesHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77710843" vertical-offset="5782" max-vertical-offset="6400">
-              <caret line="314" column="13" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#9839#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+              <caret line="1" column="120" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="120" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,8 +134,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bitbucketAppRoutes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/bitbucketAppRoutes.js">
+      <file leaf-file-name="bitbucketApp.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/routes/bitbucketApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37068966" vertical-offset="2897" max-vertical-offset="3940">
+              <caret line="147" column="21" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oauth.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/oauth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.7777777" vertical-offset="1117" max-vertical-offset="1860">
+              <caret line="65" column="34" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bitbucketEvents.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/bitbucketEvents.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -78,51 +164,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cookies.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/cookie-session/node_modules/cookies/lib/cookies.js">
+      <file leaf-file-name="oauthConfig.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/util/oauthConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="2980">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state vertical-scroll-proportion="-6.6666665" vertical-offset="80" max-vertical-offset="820">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7407407" vertical-offset="0" max-vertical-offset="220">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/passport/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1180">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/boostrap/node.js">
+      <file leaf-file-name="Procfile.dev" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile.dev">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -131,8 +207,8 @@
       <file leaf-file-name="app.test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/app.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="860">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -162,10 +238,27 @@
         <option value="$PROJECT_DIR$/public/js/data/connection.js" />
         <option value="$PROJECT_DIR$/node_modules/request/request.js" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/boostrap/node.js" />
         <option value="$PROJECT_DIR$/test/app.test.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/node_modules/express/lib/express.js" />
+        <option value="$PROJECT_DIR$/app/.env" />
+        <option value="$PROJECT_DIR$/app/controllers/oauth/passportConfig.js" />
+        <option value="$PROJECT_DIR$/app/controllers/oauth/oauthRoutes.js" />
+        <option value="$PROJECT_DIR$/app/controllers/bitbucketAppRoutes.js" />
+        <option value="$PROJECT_DIR$/app/controllers/index.js" />
+        <option value="$PROJECT_DIR$/app/routes/oauth/passportConfig.js" />
+        <option value="$PROJECT_DIR$/app/routes/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/app/util/propertiesHelper.js" />
+        <option value="$PROJECT_DIR$/app/util/passportConfig.js" />
+        <option value="$PROJECT_DIR$/app/util/oauthConfig.js" />
+        <option value="$PROJECT_DIR$/app/routes/oauth.js" />
+        <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/main.js" />
+        <option value="$PROJECT_DIR$/Procfile.dev" />
+        <option value="$PROJECT_DIR$/app/routes/bitbucketApp.js" />
       </list>
     </option>
   </component>
@@ -258,57 +351,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bit_bucket_app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,11 +367,14 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -338,10 +384,11 @@
       <recent name="$PROJECT_DIR$/public/stylesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes" />
       <recent name="$PROJECT_DIR$/app/util" />
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/temp" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager">
@@ -506,7 +553,11 @@
       <created>1412035495905</created>
       <updated>1412035495905</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changes before changing the structure">
+      <created>1412035518594</created>
+      <updated>1412035518594</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,7 +565,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6937799" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -530,7 +581,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -540,12 +591,12 @@
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6937799" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5263158" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5263158" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -599,89 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1429" max-vertical-offset="1980">
-          <caret line="87" column="3" selection-start-line="87" selection-start-column="3" selection-end-line="87" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#9839#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/jsonEvents.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="2400">
-          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-bitbucket/node_modules/passport-oauth/lib/passport-oauth/strategies/oauth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1600" max-vertical-offset="6120">
-          <caret line="80" column="59" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-github/node_modules/passport-oauth/lib/passport-oauth/strategies/oauth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="6120">
-          <caret line="75" column="73" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="300">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1180">
-          <caret line="48" column="1713" selection-start-line="48" selection-start-column="1713" selection-end-line="48" selection-end-column="1713" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-bitbucket/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="1100">
-          <caret line="44" column="925" selection-start-line="44" selection-start-column="925" selection-end-line="44" selection-end-column="925" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-bitbucket/lib/passport-bitbucket/strategy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="2100">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="360">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/authenticator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1528" max-vertical-offset="9460">
-          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/help.html">
+    <entry file="file://$PROJECT_DIR$/app/views/help.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="300">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
@@ -692,13 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="36.52" vertical-offset="913" max-vertical-offset="1600">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -744,14 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="2100">
           <caret line="42" column="25" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/jsonEvents.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="2400">
-          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -812,7 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/app/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="372">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -820,7 +774,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
+    <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="300">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -828,7 +782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/app/public/stylesheets/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
@@ -836,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/plugins/flot/flot-data.js">
+    <entry file="file://$PROJECT_DIR$/app/public/js/plugins/flot/flot-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="25000">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
@@ -844,7 +798,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/app/public/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="200">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
@@ -852,7 +806,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/plugins/morris/morris-data.js">
+    <entry file="file://$PROJECT_DIR$/app/public/js/plugins/morris/morris-data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="4660">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
@@ -860,7 +814,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/signup.html">
+    <entry file="file://$PROJECT_DIR$/app/views/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.428571" vertical-offset="0" max-vertical-offset="880">
           <caret line="18" column="78" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="78" />
@@ -871,7 +825,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
+    <entry file="file://$PROJECT_DIR$/app/public/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="587">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -879,7 +833,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/app/public/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.851851" vertical-offset="90734" max-vertical-offset="124240">
           <caret line="4550" column="2" selection-start-line="4550" selection-start-column="2" selection-end-line="4550" selection-end-column="2" />
@@ -887,7 +841,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.196429" vertical-offset="2069" max-vertical-offset="2600">
           <caret line="118" column="40" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
@@ -930,22 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7407407" vertical-offset="0" max-vertical-offset="220">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/passport/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1180">
@@ -962,10 +900,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/app.test.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/express.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="860">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        <state vertical-scroll-proportion="-32.77778" vertical-offset="15" max-vertical-offset="1980">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9200">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2035398" vertical-offset="1810" max-vertical-offset="11280">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/development.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="140">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="580">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/util/propertiesHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+          <caret line="1" column="120" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="120" />
           <folding />
         </state>
       </provider>
@@ -978,7 +980,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/bitbucketAppRoutes.js">
+    <entry file="file://$PROJECT_DIR$/app/util/oauthConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/app.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile.dev">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665" vertical-offset="80" max-vertical-offset="820">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/bitbucketEvents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -986,16 +1028,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/oauth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77710843" vertical-offset="5782" max-vertical-offset="6400">
-          <caret line="314" column="13" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#9839#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.7777777" vertical-offset="1117" max-vertical-offset="1860">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/bitbucketApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37068966" vertical-offset="2897" max-vertical-offset="3940">
+          <caret line="147" column="21" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>groovy-2.3.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bit_bucket_app</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
