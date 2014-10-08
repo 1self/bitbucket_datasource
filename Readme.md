@@ -4,7 +4,7 @@
   The quickest way to get started :
   
 ```bash
-$ git clone git://bitbucketapp
+$ git clone https://github.com/shruti514/bitbucket_app.git
 $ cd bitbucket_app
 $ npm install
 $ NODE_ENV=development foreman  start -f Procfile.dev
