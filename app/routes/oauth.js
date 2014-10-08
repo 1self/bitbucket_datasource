@@ -1,63 +1,52 @@
-var properties = require('./../util/propertiesHelper');
+var properties = require('./../util/properties')
+var config = properties.config();
 var passport = require('./../util/oauthConfig');
-var mongoDbConnection = require('./../util/connection');
-
+var usersRepo = require('./../repositories/users');
+var bitbucketClient = require('./../services/bitbucketRestService');
 
     var handleCallback = function (req, res) {
-    var bitbucketUsername;
-        var byBitbucketUsername = {
-            "bitbucketUser.username": req.user.profile.username
+        var username;
+        var findQuery = {
+            "username": req.user.profile.username
         };
-        mongoDbConnection(function (qdDb) {
-            qdDb.collection('users').findOne(byBitbucketUsername, function (err, user) {
+        usersRepo.findByUsername(findQuery).then(
+        function(user){
                 if (!user) {
                     insertBitbucketProfileInDb(req.user.profile,function(err,user){
                         if(err){
                             res.status(500).send("Database error");
                         }
-                        bitbucketUsername = user.bitbucketUser.username;
-                        req.session.bitbucketUsername = bitbucketUsername;
-                        res.redirect(properties.get('CONTEXT_URI')+'/dashboard');
+                        username = user.username;
+                        req.session.username = username;
+                        res.redirect(config.CONTEXT_URI+'/dashboard');
                     });
-                } else if(user && user.bitbucketUser.username) {
-                    bitbucketUsername = user.bitbucketUser.username;
-                    req.session.bitbucketUsername = bitbucketUsername;
-                    res.redirect(properties.get('CONTEXT_URI')+'/dashboard');
+                } else if(user && user.username) {
+                    username = user.username;
+                    req.session.username = username;
+                    res.redirect(config.CONTEXT_URI+'/dashboard');
                 }
             });
-        });
-
     }
 
-var insertBitbucketProfileInDb = function (userProfile,callback) {
-    var username = userProfile.username;
-    var getUserEmails = function(){
-    var oauth ={
-        consumer_key: properties.get('BITBUCKET_CONSUMER_KEY')
-        , consumer_secret: properties.get('BITBUCKET_CONSUMER_SECRET')
-    }
-    var url = 'https://bitbucket.org/api/1.0/users/'+username+'/emails';
-    request.get({url:url, oauth:oauth, json:true},
-        function (err, res, body) {
-            if (err){
-                console.error(err);
+    var insertBitbucketProfileInDb = function (userProfile,callback) {
+        var username = userProfile.username;
+
+        bitbucketClient.getUserEmails(username,function(err,emails){
+            if(err){
+                console.log('Failed to get user\'s email address!!');
+            }else{
+                var userRecord = {
+                    username: userProfile.username,
+                    emails: emails,
+                    registeredOn: new Date(),
+                }
+
+                usersRepo.save(userRecord,function(err,insertedRecord){
+                    callback(err,insertedRecord);
+                });
             }
-            _.each(JSON.parse(body), function (emailInfo) {
-                    userProfile.emails.push(emailInfo.email);
-            });
         });
     }
-    var bitbucketUserRecord = {
-        bitbucketUser: userProfile,
-        registeredOn: new Date()
-    }
-
-    mongoDbConnection(function (qdDb) {
-        qdDb.collection('users').insert(bitbucketUserRecord, function (err, insertedRecords) {
-            callback(err,insertedRecords[0]);
-        });
-    });
-}
 
     app.get("/signup", function (req, res) {
             res.render('signup');

@@ -1,8 +1,11 @@
 var expect = require('chai').expect;
 var request = require('superagent');
+var should =require('should');
+var properties = require('./../app/util/properties')
+var config = properties.config();
 
 describe("bit bucket app",function(){
-    var bit_bucket_app = require('../app.js');
+    var bit_bucket_app = require('./../app/app.js');
     var base_url = 'http://app.qdbitbucket';
     var port = 4000;
 
@@ -19,7 +22,6 @@ describe("bit bucket app",function(){
             request.get(base_url+':'+port+'/signup').end(function(err,res){
                 expect(err).to.not.be.ok;
                 expect(res).to.have.property('status',200);
-                expect(res.body).to.contain('/auth/bitbucket');
             })
         done();
         });
@@ -33,5 +35,5 @@ describe("bit bucket app",function(){
                 })
             done();
             });
-        });
+    });
 });

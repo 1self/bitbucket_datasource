@@ -1,13 +1,14 @@
 var passport = require('passport');
 var BitbucketStrategy = require('passport-bitbucket').Strategy;
-var properties = require('./propertiesHelper');
+var properties = require('./properties')
+var config = properties.config();
 
 exports = module.exports = passport;
 
  passport.use(new BitbucketStrategy({
-            consumerKey: properties.get('BITBUCKET_CONSUMER_KEY'),
-            consumerSecret: properties.get('BITBUCKET_CONSUMER_SECRET'),
-            callbackURL: properties.get('CONTEXT_URI')+"/auth/bitbucket/callback"
+            consumerKey: config.BITBUCKET_CONSUMER_KEY,
+            consumerSecret: config.BITBUCKET_CONSUMER_SECRET,
+            callbackURL: config.CONTEXT_URI+"/auth/bitbucket/callback"
             },
             function(token, tokenSecret, profile, done) {
                 var bitbucketProfile= {

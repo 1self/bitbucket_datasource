@@ -1,8 +1,8 @@
 var mongoClient = require('mongodb').MongoClient;
-var properties = require('./properties')
-var config = properties.config();
 
 var db;
+
+var connectionUrl = 'mongodb://localhost/qd_bitbucket_app_test';
 
 module.exports = function(callback) {
     if (db) {
@@ -10,7 +10,7 @@ module.exports = function(callback) {
         return;
     }
 
-    mongoClient.connect(config.MONGO_URI, function(err, dbObject) {
+    mongoClient.connect(connectionUrl, function(err, dbObject) {
         if (err) {
             console.log(err);
         } else {
@@ -18,4 +18,5 @@ module.exports = function(callback) {
             callback(db);
         }
     });
+
 };
