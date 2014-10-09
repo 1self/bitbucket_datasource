@@ -1,7 +1,7 @@
 var properties = require('./../util/properties')
 var config = properties.config();
 var passport = require('./../util/oauthConfig');
-var usersRepo = require('./../repositories/users');
+var usersRepo = require('./../repositories/usersRepository');
 var bitbucketClient = require('./../services/bitbucketRestService');
 
     var handleCallback = function (req, res) {
@@ -27,7 +27,7 @@ var bitbucketClient = require('./../services/bitbucketRestService');
                 }
             });
     }
-
+    //TODO : does not belong here - move to usersRepository
     var insertBitbucketProfileInDb = function (userProfile,callback) {
         var username = userProfile.username;
 

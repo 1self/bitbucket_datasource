@@ -1,5 +1,5 @@
 var _ = require('underscore');
-var usersRepo = require('./../repositories/users');
+var usersRepo = require('./../repositories/usersRepository');
 var btbktRest = require('./../services/bitbucketRestService');
 var qdRest = require('./../services/qdRestService');
 var btbktService = require('./../services/bitbucketService');
