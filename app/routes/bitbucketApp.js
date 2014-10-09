@@ -21,7 +21,7 @@ function findStreamById(streams,streamid){
         return result;
     }
 }
-
+//TODO: Need to clean this up
 app.get('/refresh_push_events',function(req,res){
     var user = usersRepo.findByUsername(req.session.username)
     .then(function(user){
@@ -37,11 +37,10 @@ app.get('/refresh_push_events',function(req,res){
                     .then(btbktService.sortEvents)
                     .then(function(sortedEvents){
                         var lastSyncedDateTime = sortedEvents[0].eventDateTime;
-                        return usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,newStream.streamid)
+                         usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,newStream.streamid);
+                         return qdRest.postEventsToQdApi(sortedEvents,newStream.writeToken)
                     })
-                    .then(function(sortedEvents){
-                       qdRest.postEventsToQdApi(sortedEvents,newStream.writeToken)
-                    })
+
             })
             .then(function(){
                  res.send('events being posted to qd');
@@ -62,11 +61,10 @@ app.get('/refresh_push_events',function(req,res){
             .then(btbktService.sortEvents)
             .then(function(sortedEvents){
                 var lastSyncedDateTime = sortedEvents[0].eventDateTime;
-                return usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,stream.streamid)
+                 usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,stream.streamid)
+                 qdRest.postEventsToQdApi(sortedEvents,stream.writeToken)
             })
-            .then(function(sortedEvents){
-                     qdRest.postEventsToQdApi(sortedEvents,stream.writeToken)
-                })
+
             .then(function(){
                 res.send('events being posted to qd');
             })

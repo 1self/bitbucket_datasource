@@ -73,6 +73,7 @@ var Users = function(){
                              console.log('Database error '+err);
                              throw new Error();
                          }
+                         console.log('records updated '+numberOfUpdatedRecords);
                     });
                 });
     }

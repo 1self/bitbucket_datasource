@@ -8,7 +8,7 @@ var btbktService = function(){
         var deferred = Q.defer();
         var filteredEvents = [];
         _.each(events,function(event){
-          if(moment(event.created_on) > moment(lastSyncedDateTime.toISOString())){
+          if(moment(event.created_on) > moment(lastSyncedDateTime)){
             filteredEvents.push(event);
           }
         });
@@ -18,7 +18,7 @@ var btbktService = function(){
 
     var _sortEvents=function(events){
        var deferred = Q.defer();
-       sortedArray =  _.sortBy(events, function(event){return event.eventDateTime}).reverse()
+       var sortedArray =  _.sortBy(events, function(event){return event.eventDateTime}).reverse()
        deferred.resolve(sortedArray);
        return deferred.promise;
     }

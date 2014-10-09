@@ -56,6 +56,7 @@ var qdRest = function(){
     }
 
     var _postEventsToQdApi = function(events,writeToken){
+        var deferred = Q.defer();
         _.each(events,function(event){
             var options = {
                             url:  config.QD_REST_APP_URL+ '/stream/'+event.streamid+'/event',
@@ -68,11 +69,13 @@ var qdRest = function(){
                           };
             request.post(options,function(err,response,body){
                 if(err){
-                console.log(err);
+                    deferred.reject(err);
                 }
             });
 
         });
+        deferred.resolve(events);
+        return deferred.promise;
     };
 
     return{
