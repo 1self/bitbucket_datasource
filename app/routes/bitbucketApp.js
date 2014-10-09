@@ -2,6 +2,7 @@ var _ = require('underscore');
 var usersRepo = require('./../repositories/users');
 var btbktRest = require('./../services/bitbucketRestService');
 var qdRest = require('./../services/qdRestService');
+var btbktService = require('./../services/bitbucketService');
 
 function doesPushStreamIdExists(user){
     return user && user.pushStreamId;
@@ -33,8 +34,13 @@ app.get('/refresh_push_events',function(req,res){
                     .then(function(events){
                         return qdRest.transformToQdEvents(events,newStream.streamid)
                     })
-                    .then(function(qdEvents){
-                       qdRest.postEventsToQdApi(qdEvents,newStream.writeToken)
+                    .then(btbktService.sortEvents)
+                    .then(function(sortedEvents){
+                        var lastSyncedDateTime = sortedEvents[0].eventDateTime;
+                        return usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,newStream.streamid)
+                    })
+                    .then(function(sortedEvents){
+                       qdRest.postEventsToQdApi(sortedEvents,newStream.writeToken)
                     })
             })
             .then(function(){
@@ -47,11 +53,19 @@ app.get('/refresh_push_events',function(req,res){
         }else{
             var stream = findStreamById(user.streams,user.pushStreamId)
             btbktRest.getPushEventsForUser(req.session.username)
-            .then(function(events){
-                return qdRest.transformToQdEvents(events,stream.streamid)
-               })
             .then(function(qdEvents){
-                     qdRest.postEventsToQdApi(qdEvents,stream.writeToken)
+                return btbktService.filterEventsByLastSyncedDateTime(qdEvents,stream.lastSyncedDateTime)
+            })
+            .then(function(filteredEvents){
+                return qdRest.transformToQdEvents(filteredEvents,stream.streamid)
+               })
+            .then(btbktService.sortEvents)
+            .then(function(sortedEvents){
+                var lastSyncedDateTime = sortedEvents[0].eventDateTime;
+                return usersRepo.updateLastSyncedDateTime(lastSyncedDateTime,user.username,stream.streamid)
+            })
+            .then(function(sortedEvents){
+                     qdRest.postEventsToQdApi(sortedEvents,stream.writeToken)
                 })
             .then(function(){
                 res.send('events being posted to qd');

@@ -55,10 +55,33 @@ var Users = function(){
         });
     }
 
+    var _updateLastSyncedDateTime = function(lastSyncedDateTime,username,streamid){
+     var query = {"username":username,
+                  "streams.streamid":streamid
+                };
+                var updateQuery = {
+                    $set: {
+                        "streams.$.lastSyncedDateTime": lastSyncedDateTime
+                    }
+                };
+                mongoConnection(function (qdDb) {
+                    qdDb.collection('users').update(query, updateQuery, {
+                        upsert: true
+                    },
+                    function (err, numberOfUpdatedRecords) {
+                         if(err){
+                             console.log('Database error '+err);
+                             throw new Error();
+                         }
+                    });
+                });
+    }
+
     return {
         findByUsername : _findByUsername,
         linkPushEventStreamToUser : _linkPushEventStreamToUser,
         save : _save,
+        updateLastSyncedDateTime:_updateLastSyncedDateTime
     }
 }();
 

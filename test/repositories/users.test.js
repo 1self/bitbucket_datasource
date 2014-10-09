@@ -9,7 +9,14 @@ describe('user\'s repository',function(){
      var user = {
         username:'testUser',
         registeredOn:new Date(2013,2,1,1,10),
-        emails:['test1@test.com','test2@test.com']
+        emails:['test1@test.com','test2@test.com'],
+        pushStreamId:'test stream id',
+        streams:[
+            {
+                streamid : 'test stream id',
+                writeToken : 'test write token'
+            }
+        ]
      }
 
      beforeEach(function(done){
@@ -56,6 +63,25 @@ describe('user\'s repository',function(){
                        user.emails.should.have.property(0,currentUser.emails[0]);
                        user.emails.should.have.property(1,currentUser.emails[1]);
                        user.pushStreamId.should.equal(stream.streamid);
+                       done();
+                });
+            });
+        }
+    });
+
+    it('should update last linked date',function(done){
+        var lastSyncedDateTime = new Date();
+        var stream = currentUser.streams[0];
+
+        usersRepo.updatelastSyncedDateTime(lastSyncedDateTime,currentUser.username,stream.streamid)
+        {
+            mongoConnection(function(db){
+                db.collection('users').findOne({"username":currentUser.username}, function (err, user) {
+                       user.username.should.equal(currentUser.username);
+                       user.pushStreamId.should.equal(stream.streamid);
+                       user.streams[0].streamid.should.equal(stream.streamid);
+                       user.streams[0].writeToken.should.equal(stream.writeToken);
+                       user.streams[0].lastSyncedDateTime.toString().should.equal(lastSyncedDateTime.toString());
                        done();
                 });
             });

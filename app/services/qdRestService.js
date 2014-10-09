@@ -8,7 +8,7 @@ var config = properties.config();
 var qdRest = function(){
 
     //Todo[shruti]:need to handle location and properties
-    var event = {
+    var qdEventTemplate = {
         'eventDateTime': '',
         'dateTime': '',
         'streamid': '',
@@ -45,10 +45,8 @@ var qdRest = function(){
         var deferred = Q.defer();
         var qdEvents = [];
          _.each(events, function (event) {
-            var qdEvent = clone(event);
-            qdEvent.eventDateTime = {
-                '$date': moment(event.created_at).format()
-            };
+            var qdEvent = clone(qdEventTemplate);
+            qdEvent.eventDateTime = moment(event.created_on).format();
             qdEvent.dateTime = moment().format();
             qdEvent.streamid = streamid;
             qdEvents.push(qdEvent);
